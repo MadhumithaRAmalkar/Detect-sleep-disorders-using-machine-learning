@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Disorder Detection System</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom CSS for Sleep Disorder Detection System */
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow effect */
+    }
+
+    .navbar-brand {
+      color: #333; /* Navbar brand color */
+      font-weight: bold;
+      transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .navbar-brand:hover {
+      color: #007bff; /* Hover color */
+    }
+
+    .navbar-nav .nav-link {
+      color: #555; /* Navbar links color */
+      transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #007bff; /* Navbar link hover color */
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      background: url('static/img/hero-bg.jpg') center/cover no-repeat fixed; /* Background image */
+      padding: 100px 0;
+      color: #fff; /* Text color on hero section */
+      text-align: center;
+      box-shadow: inset 0 0 50px rgba(0,0,0,0.5); /* Inner shadow effect */
+      height:75vh;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Text shadow effect */
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero .btn-primary {
+      background-color: rgba(0, 123, 255, 0.8); /* Translucent button background */
+      border-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+      border-radius: 20px; /* Border radius */
+      box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1); /* Button shadow effect */
+    }
+
+    .hero .btn-primary:hover {
+      background-color: rgba(0, 105, 217, 0.8); /* Accent color on hover */
+      border-color: #0062cc;
+      transform: scale(1.05); /* Scale effect on hover */
+    }
+
+    /* Sleep Health Section Styles */
+    .sleep-health {
+      padding: 80px 0;
+      background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+      border-radius: 20px; /* Border radius */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect */
+    }
+
+    .sleep-health h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Text shadow effect */
+    }
+
+    .sleep-health p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Services Section Styles */
+    .services {
+      padding: 100px 0;
+      background-color: #f8f9fa; /* Light gray background */
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .service-item {
+      margin-bottom: 30px;
+    }
+
+    .service-item h3 {
+      font-size: 1.8rem;
+      color: #007bff; /* Accent color */
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Contact Section Styles */
+    .contact {
+      padding: 80px 0;
+      background-color: #fff; /* White background */
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+      border-radius: 20px; /* Border radius */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect */
+      padding: 30px;
+    }
+
+    .contact-form h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-form .form-control {
+      border-radius: 10px; /* Rounded input fields */
+    }
+
+    .contact-form .btn-primary {
+      background-color: #007bff; /* Primary button color */
+      border-color: #007bff;
+      border-radius: 10px; /* Rounded button */
+    }
+
+    .contact-form .btn-primary:hover {
+      background-color: #0069d9; /* Darker accent color on hover */
+    }
+
+    .contact-form label {
+      color: #333; /* Label color */
+    }
+
+    .contact-form textarea.form-control {
+      height: 150px; /* Set height for textarea */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sleep Disorder Detection</a>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/form">Diagnose</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sleep_health">Sleep Health</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4">Detect Sleep Disorders</h1>
+    <p class="lead">Your trusted system for detecting sleep disorders.</p>
+    <a href="/form" class="btn btn-primary btn-lg">Get Started</a>
+  </div>
+</section>
+
+<!-- Sleep Health Section -->
+<section class="sleep-health">
+  <div class="container">
+    <h2>Sleep Health</h2>
+    <p>Sleep is essential for maintaining overall health and well-being. It plays a critical role in many bodily functions, including:</p>
+    <ul>
+      <li>Restoring and rejuvenating the body and mind</li>
+      <li>Supporting cognitive function and memory</li>
+      <li>Regulating mood and reducing stress</li>
+      <li>Boosting the immune system</li>
+      <li>Promoting physical growth and development</li>
+    </ul>
+    <p>Improving sleep health can lead to better mental and physical health, enhanced productivity, and a higher quality of life.</p>
+    <p>Here are some tips for improving sleep health:</p>
+    <ul>
+      <li>Maintain a regular sleep schedule</li>
+      <li>Create a relaxing bedtime routine</li>
+      <li>Ensure a comfortable sleep environment</li>
+      <li>Limit exposure to screens before bedtime</li>
+      <li>Stay active and manage stress effectively</li>
+    </ul>
+    <p>If you experience persistent sleep problems, it's important to seek professional help. Our sleep disorder detection system can assist you in identifying potential issues and finding the right treatment options.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3">
+  <p>&copy; 2024 Sleep Disorder Detection System. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Virtual environment
+venv/
+env/
+*.env/
+
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore data and output directories
+data/
+output/
+
+# Ignore logs, temp files, and editor-specific files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Ignore specific Python packages installed in the virtual environment
+!venv/lib/python3.x/site-packages/numpy/
+!venv/lib/python3.x/site-packages/pandas/
+!venv/lib/python3.x/site-packages/scikit_learn/
+!venv/lib/python3.x/site-packages/matplotlib/
+!venv/lib/python3.x/site-packages/seaborn/
+!venv/lib/python3.x/site-packages/xgboost/
+!venv/lib/python3.x/site-packages/catboost/
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+
+# Test-related cache files
+.pytest_cache/
+.coverage
+
+# Miscellaneous system files
+.DS_Store  # macOS
+Thumbs.db  # Windows

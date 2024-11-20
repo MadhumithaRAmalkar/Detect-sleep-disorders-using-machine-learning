@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS for Sleep Disorder Prediction Form */
+
+        /* Background image */
+        body {
+            background: url('static/img/hero-bg.jpg') center/cover no-repeat fixed; /* Replace 'background.jpg' with your image path */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+
+        /* Transparent navbar styles */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow effect */
+        }
+
+        .navbar-brand {
+            color: #333; /* Navbar brand color */
+            font-weight: bold;
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        .navbar-brand:hover {
+            color: #007bff; /* Hover color */
+        }
+
+        .navbar-nav .nav-link {
+            color: #555; /* Navbar links color */
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff; /* Navbar link hover color */
+        }
+
+        /* Container styles */
+        .container {
+            /* Margin top adjustment for navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             /* Adjusted height to accommodate navbar */
+        }
+
+        /* Card styles */
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect */
+            max-width: 600px; /* Limit card width */
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Translucent white background */
+            padding: 30px;
+        }
+
+        /* Card title styles */
+        .card-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333; /* Title color */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Text shadow effect */
+        }
+
+        /* Form group styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Form control styles */
+        .form-control {
+            border-radius: 10px; /* Rounded input fields */
+        }
+
+        /* Primary button styles */
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border-color: #007bff;
+            border-radius: 10px; /* Rounded button */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9; /* Darker accent color on hover */
+        }
+    </style>
+
+    <!-- Watson Assistant Chat Integration Script -->
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Sleep Disorder Detection</a>
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/form">Diagnose</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sleep_health">Sleep Health</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Main content -->
+    <div class="container" style="margin-top:10px;margin-bottom:10px;">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Sleep Disorder Prediction Form</h1>
+               <form action="/result" method="post">
+                    <label>Gender:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" name="age" min="0" max="130" required placeholder="Enter your age">
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">Occupation:</label>
+                        <select class="form-control" id="occupation" name="occupation" required>
+                            <option selected disabled>Select a profession</option>
+                            <option>Accountant</option>
+                            <option>Doctor</option>
+                            <option>Engineer</option>
+                            <option>Lawyer</option>
+                            <option>Manager</option>
+                            <option>Nurse</option>
+                            <option>Sales Representative</option>
+                            <option>Salesperson</option>
+                            <option>Scientist</option>
+                            <option>Software Engineer</option>
+                            <option>Teacher</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sleep_duration">Sleep Duration (hours):</label>
+                        <input type="number" class="form-control" id="sleep_duration" name="sleep_duration" required placeholder="Enter hours of sleep">
+                    </div>
+                    <div class="form-group">
+                        <label for="physical_activity_level">Physical Activity Level:</label>
+                        <input type="number" class="form-control" id="physical_activity_level" name="physical_activity_level" required placeholder="Enter activity level in range 1-10">
+                    </div>
+                    <div class="form-group">
+                        <label for="stress_level">Stress Level:</label>
+                        <input type="number" class="form-control" id="stress_level" name="stress_level" required placeholder="Enter stress level in range 1-10">
+                    </div>
+                    <div class="form-group">
+                        <label for="bmi_category">BMI Category:</label>
+                       <select class="form-control" id="bmi_category" name="bmi_category" required>
+                            <option selected disabled>Select BMI category</option>
+                            <option>Normal</option>
+                            <option>Normal Weight</option>
+                            <option>Obese</option>
+                            <option>Overweight</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="heart_rate">Heart Rate:</label>
+                        <input type="number" class="form-control" id="heart_rate" name="heart_rate" required placeholder="Enter heart rate">
+                    </div>
+                    <div class="form-group">
+                        <label for="blood_pressure">Blood Pressure:</label>
+                        <input type="text" class="form-control" id="blood_pressure" name="blood_pressure" required placeholder="Enter blood pressure in format 80/120">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" value="5" class="form-control" id="quality_of_sleep" name="quality_of_sleep" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" value="5000" class="form-control" id="daily_steps" name="daily_steps" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
