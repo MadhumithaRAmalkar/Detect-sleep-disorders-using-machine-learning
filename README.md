@@ -27,37 +27,47 @@ This repository showcases how machine learning can predict and classify sleep di
 
 ### 1️⃣ Application Homepage  
 The sleek and responsive homepage introduces the app's functionality.  
-![Application Homepage](https://github.com/MadhumithaRAmalkar/detecting-sleep-disorders-using-machine-learning/blob/main/images/first.PNG)
+![Application Homepage](https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning/blob/main/first.PNG)
 
 ---
 
 ### 2️⃣ Input Form (Step 1)  
 The form where users can provide the first set of inputs for analysis.  
-![Input Form (Step 1)](https://github.com/MadhumithaRAmalkar/detecting-sleep-disorders-using-machine-learning/blob/main/images/second.PNG)
+![Input Form (Step 1)](https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning/blob/main/second.PNG)
 
 ---
 
 ### 3️⃣ Input Form (Step 2)  
 The second part of the form, gathering additional user information for prediction.  
-![Input Form (Step 2)](https://github.com/MadhumithaRAmalkar/detecting-sleep-disorders-using-machine-learning/blob/main/images/third.PNG)
+![Input Form (Step 2)](https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning/blob/main/third.PNG)
 
 ---
 
-### 4️⃣ Prediction Results Page 
+### 4️⃣ Prediction Results Page  
 This form collects detailed data for final analysis and prediction generation.  
-![Prediction Form](https://github.com/MadhumithaRAmalkar/detecting-sleep-disorders-using-machine-learning/blob/main/images/fourth.PNG)
+![Prediction Form](https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning/blob/main/fourth.PNG)
 
 ---
-
-
----
-
 
 ### 5️⃣ Tips for Quality Sleep  
 Useful recommendations to improve sleep quality and reduce risks of disorders.  
-![Tips for Quality Sleep](https://github.com/MadhumithaRAmalkar/detecting-sleep-disorders-using-machine-learning/blob/main/final.PNG)
+![Tips for Quality Sleep](https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning/blob/main/last.PNG)
 
 ---
+
+## 🛠️ Installation and Usage
+
+Follow these steps to get started:
+
+### 1. **Clone the Repository**  
+```bash
+git clone https://github.com/MadhumithaRAmalkar/Detect-sleep-disorders-using-machine-learning.git
+cd Detect-sleep-disorders-using-machine-learning
+
+
+
+
+
 
 ## 🛠️ Installation and Usage
 
