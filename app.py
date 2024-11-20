@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import pandas as pd
+import os
 import joblib
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
@@ -82,5 +83,6 @@ def result():
     
     return render_template('result.html', prediction=None)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if _name_ == '_main_':
+    # Ensuring the app runs on the correct host and port provided by Render
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
