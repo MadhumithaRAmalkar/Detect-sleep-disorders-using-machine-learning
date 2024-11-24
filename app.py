@@ -32,21 +32,22 @@ class CustomLabelEncoder(LabelEncoder):
     def fit_transform(self, y):
         return self.fit(y).transform(y)
 
-# Load encoders, scaler, and model
-encoders = {
-    'Gender': joblib.load('Gender_encoder.pkl'),
-    'Occupation': joblib.load('Occupation_encoder.pkl'),
-    'BMI Category': joblib.load('BMI Category_encoder.pkl'),
-    'Sleep Disorder': joblib.load('Sleep Disorder_encoder.pkl')
-}
-
-scaler = joblib.load('scaler.pkl')
-model = joblib.load('best_model.pkl')
-
+# Lazy load the encoders, scaler, and model inside the result route
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     if request.method == 'POST':
         try:
+            # Load encoders, scaler, and model only when needed
+            encoders = {
+                'Gender': joblib.load('Gender_encoder.pkl'),
+                'Occupation': joblib.load('Occupation_encoder.pkl'),
+                'BMI Category': joblib.load('BMI Category_encoder.pkl'),
+                'Sleep Disorder': joblib.load('Sleep Disorder_encoder.pkl')
+            }
+
+            scaler = joblib.load('scaler.pkl')
+            model = joblib.load('best_model.pkl')
+
             # Retrieve form data with default values for missing fields
             data = {
                 'Gender': request.form.get('Gender', 'Unknown'),
